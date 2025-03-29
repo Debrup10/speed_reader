@@ -1,2 +1,7 @@
 pandas
 numpy
+streamlit
+python-docx
+textblob
+altair<5
+PyPDF2
