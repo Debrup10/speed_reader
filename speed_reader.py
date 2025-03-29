@@ -74,8 +74,8 @@ def main():
     font_size = st.sidebar.slider("Font Size", 20, 60, 30)
     
     # Color options
-    text_color = st.sidebar.color_picker("Text Color", "#000000")
-    background_color = st.sidebar.color_picker("Background Color", "#FFFFFF")
+    # text_color = st.sidebar.color_picker("Text Color", "#000000")
+    # background_color = st.sidebar.color_picker("Background Color", "#FFFFFF")
     
     # Separator option
     separator = st.sidebar.selectbox(
