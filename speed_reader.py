@@ -71,11 +71,11 @@ def main():
     words_per_chunk = st.sidebar.slider("Words per Chunk", 1, 5, 2)
     
     # Font size
-    font_size = st.sidebar.slider("Font Size", 20, 60, 30)
+    font_size = st.sidebar.slider("Font Size (px)", 12, 48, 20)
     
     # Color options
-    # text_color = st.sidebar.color_picker("Text Color", "#000000")
-    # background_color = st.sidebar.color_picker("Background Color", "#FFFFFF")
+    text_color = st.sidebar.color_picker("Pick a text color", "#000000")
+    background_color = st.sidebar.color_picker("Pick a background color", "#FFFFFF")
     
     # Separator option
     separator = st.sidebar.selectbox(
@@ -135,16 +135,17 @@ def main():
             visible_chunks = chunks[max(0, i-1):i+1]
             # Clear previous content
             ph.markdown(
-        f"""
-        <div style='background-color: {background_color}; padding: 40px; 
-                    border-radius: 10px; text-align: center; color: {text_color};
-                    min-height: 200px; display: flex; align-items: center;
-                    justify-content: center; margin: 20px 0;'>
-            {" ".join(visible_chunks)}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+                f"""
+                <div style='background-color: {background_color}; padding: 40px; 
+                            border-radius: 10px; text-align: center; color: {text_color};
+                            font-size: {font_size}px;
+                            min-height: 200px; display: flex; align-items: center;
+                            justify-content: center; margin: 20px 0;'>
+                    {" ".join(visible_chunks)}
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
            
     
             if selected_separator != "Words":
