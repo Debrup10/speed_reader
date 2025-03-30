@@ -90,7 +90,7 @@ def main():
     separator_map = {
         "Words": None,
         "Sentences (.)": ".",
-        "Paragraphs (\\n)": "\n"
+        "Lines (\\n)": "\n"
     }
     selected_separator = separator_map[separator]
 
